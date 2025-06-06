@@ -17,6 +17,6 @@
 
 // ✅SOLUTION
 function multiply(a, b) {
-    a * b
+    return a * b
 }
 console.log(multiply(11, 12));
