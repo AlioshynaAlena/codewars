@@ -47,13 +47,10 @@ const objA = {
     c: 30
 }
 const objB = {
-        a: 3,
-        c: 6,
-        d: 3
-    }
-    // let result = Object.keys(objA) + Object.keys(objB)
-    // console.log(result);
-
+    a: 3,
+    c: 6,
+    d: 3
+}
 
 function combine(...objects) {
     let result = {}
@@ -72,5 +69,21 @@ function combine(...objects) {
     return result
 }
 
-
 console.log(combine(objA, objB));
+
+
+//Другой способ:
+// function combine(...objects) {
+//     const result = {}
+//     for (let i = 0; i < objects.length; i++) { //пробегаемся по нашему объекту
+//         const keys = Object.keys(result) //берем result и проверяем какие у него есть ключи. Сначала он пустой, но потом что-то добавится. Поэтому нам всегда нужно знать: добавить новое значение или прибавить к существующему
+//         for (let key in arr[i]) { //запускаем по objects новый цикл. Берем ключи из objects и спрашиваем: у result в keys есть такой ключ
+//             if (keys.includes(key)) { //ключи resualt содержат key? includes возвращает нам либо true/false
+//                 result[key] = result[key] + arr[i][key] //если true, то к старому значению необходимо прибавить новое
+//             } else {
+//                 result[key] = arr[i][key] //если false, тогда создаем новый ключ и записываем его значение(objects.f)
+//             }
+//         }
+//     }
+//     return result
+// }
