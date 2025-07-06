@@ -22,6 +22,17 @@
 
 // ✅SOLUTION
 function descendingOrder(n) {
+    let num = []
+    while (n > 0) {
+        num.push(n)
+    }
+    for (let i = 0; i < n.length - 1; i++) {
+        for (let j = 0; j < n.length; j++) {
+
+
+        }
+
+    }
 
 }
 
