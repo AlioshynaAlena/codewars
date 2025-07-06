@@ -35,11 +35,7 @@ function getMiddle(s) {
     if (s.length % 2 !== 0) {
         return s[middle] //берем символ по индексу!!!
     } else {
-        return s.slice(middle - 1, middle + 1)
+        return s.slice(middle - 1, middle + 1) //т.е. индексы от 1 до 3 не вкл
     }
 }
 console.log(getMiddle("test"));
-
-
-// const middlePosition = Math.floor(3 / 2);
-// console.log(middlePosition);
