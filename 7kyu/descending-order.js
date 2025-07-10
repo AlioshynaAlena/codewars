@@ -3,11 +3,8 @@
 
 // Examples:
 // Input: 42145 Output: 54421
-
 // Input: 145263 Output: 654321
-
 // Input: 123456789 Output: 987654321
-
 // Ваша задача - создать функцию, которая может принимать в качестве аргумента любое неотрицательное целое число и возвращать его с цифрами в порядке убывания. По сути, нужно переставить цифры так, чтобы получилось максимально возможное число.
 
 
@@ -22,18 +19,8 @@
 
 // ✅SOLUTION
 function descendingOrder(n) {
-    let num = []
-    while (n > 0) {
-        num.push(n)
-    }
-    for (let i = 0; i < n.length - 1; i++) {
-        for (let j = 0; j < n.length; j++) {
-
-
-        }
-
-    }
-
+    return parseInt(
+        n.toString().split('').map(Number).sort((a, b) => b - a).join(''))
 }
 
 console.log(descendingOrder(15));
