@@ -27,7 +27,7 @@ function position(letter) {
     //Проверка что это английская буква
     if (value >= 97 && value <= 122) {
         //Вычисление позиции в алфавите('a' = 97: 97-1=96 первая позиция...)
-        return value - 96
+        return `Position of alphabet: ${value - 96}`
     } else {
         return null
     }
@@ -35,4 +35,4 @@ function position(letter) {
 
 }
 
-console.log(position("e"));
+console.log(position("e"), );
