@@ -9,12 +9,11 @@
 
 // ✅SOLUTION
 function getCount(str) {
-  let value = str.split('')
-  let sum = []
+  let sum = ""
 
-  for (let i = 0; i < value.length; i++) {
-    if (value[i] === 'a' || value[i] === 'e' || value[i] === 'i' || value[i] === 'o' || value[i] === 'u') {
-      sum.push(value[i])
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === 'a' || str[i] === 'e' || str[i] === 'i' || str[i] === 'o' || str[i] === 'u') {
+      sum += str[i]
     }
   }
 return sum.length
@@ -22,5 +21,3 @@ return sum.length
 
 console.log(getCount("abracadabra"))
 
-
-// 'a' || 'e' || 'i' || 'o' || 'u'
