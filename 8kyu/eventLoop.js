@@ -143,23 +143,89 @@
 
 
 
+//
+// async function first() {
+//   console.log(9)
+//   await Promise.resolve(2).then(r => console.log(r))
+//   console.log(0)
+//   await Promise.resolve(3).then(r => console.log(r))
+// }
+//
+// async function second() {
+//   console.log(10)
+//   await Promise.resolve(4).then(r => console.log(r))
+//   console.log(11)
+//   await Promise.resolve(5).then(r => console.log(r))
+// }
+//
+// first()
+// second()
+//
+// const promises = Promise.resolve('new Promise')
+// promises.then(str => console.log(str))
 
-async function first() {
-  console.log(9)
-  await Promise.resolve(2).then(r => console.log(r))
-  console.log(0)
-  await Promise.resolve(3).then(r => console.log(r))
-}
 
-async function second() {
-  console.log(10)
-  await Promise.resolve(4).then(r => console.log(r))
-  console.log(11)
-  await Promise.resolve(5).then(r => console.log(r))
-}
 
-first()
-second()
+// function start() {
+//   console.log('a');
+//   middle();
+//   console.log('b');
+// }
+// function middle() {
+//   console.log('c');
+//   end();
+//   console.log('d');
+// }
+// function end() {
+//   console.log('e');
+// }
+// start();
 
-const promises = Promise.resolve('new Promise')
-promises.then(str => console.log(str))
+
+
+// console.log('1');
+//
+// setTimeout(() => {
+//   console.log('2');
+// }, 0);
+//
+// Promise.resolve().then(() => {
+//   console.log('3');
+// });
+//
+// console.log('4');
+
+
+
+// (function task3(){
+//   const p = new Promise((resolve, reject)=>{
+//     setTimeout(()=> {
+//       console.log('rejected now');
+//       reject("failure")
+//     }, 1500);
+//   });
+//
+//   p.then(
+//     ()=>console.log('success 1'),
+//     ()=>console.log('fail 1')
+//   ).then(
+//     ()=> console.log('success 2'),
+//     ()=> console.log('fail 2')
+//   )
+//
+//   p.then(
+//     ()=>console.log('success 3'),
+//     ()=>console.log('fail 3')
+//   ).then(
+//     ()=>console.log('success 4'),
+//     ()=>console.log('fail 4')
+//   )
+// })()
+
+
+
+// console.log("Start");
+// setTimeout(() => console.log("Timeout"), 0);
+// Promise.resolve().then(() => console.log("Promise"));
+// process.nextTick(() => console.log("NextTick"));
+// console.log("End");
