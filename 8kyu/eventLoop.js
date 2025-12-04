@@ -7,8 +7,8 @@
 // console.log('b')
 //
 // console.log('c')
-//
-// //a b c timeout
+
+
 
 
 // console.log(1)
@@ -26,8 +26,8 @@
 // }, 3000)
 //
 // console.log(5)
-//
-// //1 5 4 3 2
+
+
 
 
 // setTimeout(function () {
@@ -50,9 +50,10 @@
 
 // function a() {
 //   setTimeout(() => {
-//     console.log('a')
-//   })
+//   console.log('a')
+// })
 // }
+//
 // function b() {
 //   console.log('b')
 // }
@@ -70,8 +71,10 @@
 //
 // b()
 
-//
-//
+
+
+
+
 // console.log(1)
 //
 // setTimeout(() => {
@@ -143,7 +146,48 @@
 
 
 
+// console.log('A')
 //
+// setTimeout(() => {
+//   console.log('B')
+// }, 0)
+//
+// Promise.resolve().then(() => {
+//   console.log('C')
+// })
+//
+// async function alpha() {
+//   console.log('D')
+//   await beta()
+//   console.log('E')
+// }
+//
+// async function beta() {
+//   console.log('F')
+//   await gamma()
+//   console.log('G')
+// }
+//
+// async function gamma() {
+//   console.log('H')
+// }
+//
+// alpha()
+//
+// new Promise((resolve) => {
+//   console.log('I')
+//   resolve()
+//   console.log('J')
+// }).then(() => {
+//   console.log('K')
+// })
+//
+// console.log('L')
+
+
+
+
+
 // async function first() {
 //   console.log(9)
 //   await Promise.resolve(2).then(r => console.log(r))
@@ -163,6 +207,48 @@
 //
 // const promises = Promise.resolve('new Promise')
 // promises.then(str => console.log(str))
+
+
+
+// console.log('1')
+//
+// setTimeout(() => {
+//   console.log('2')
+//   Promise.resolve().then(() => console.log('3'))
+// }, 0)
+//
+// Promise.resolve().then(() => {
+//   console.log('4')
+//   setTimeout(() => console.log('5'), 0)
+// })
+//
+// async function main() {
+//   console.log('6')
+//   await Promise.resolve()
+//   console.log('7')
+//   setTimeout(() => console.log('8'), 0)
+// }
+//
+// main()
+//
+// new Promise((resolve) => {
+//   console.log('9')
+//   resolve()
+// }).then(() => {
+//   console.log('10')
+//   return Promise.resolve()
+// }).then(() => {
+//   console.log('11')
+// })
+//
+// setTimeout(() => console.log('12'), 0)
+//
+// console.log('13')
+//
+// Promise.resolve().then(() => console.log('14'))
+//
+// console.log('15')
+
 
 
 
@@ -205,21 +291,11 @@
 //     }, 1500);
 //   });
 //
-//   p.then(
-//     ()=>console.log('success 1'),
-//     ()=>console.log('fail 1')
-//   ).then(
-//     ()=> console.log('success 2'),
-//     ()=> console.log('fail 2')
-//   )
+//   p.then(()=>console.log('success 1'), ()=>console.log('fail 1'))
+//     .then(()=> console.log('success 2'), ()=> console.log('fail 2'))
 //
-//   p.then(
-//     ()=>console.log('success 3'),
-//     ()=>console.log('fail 3')
-//   ).then(
-//     ()=>console.log('success 4'),
-//     ()=>console.log('fail 4')
-//   )
+//   p.then(()=>console.log('success 3'), ()=>console.log('fail 3'))
+//     .then(()=>console.log('success 4'), ()=>console.log('fail 4'))
 // })()
 
 
